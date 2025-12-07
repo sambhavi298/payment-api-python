@@ -1,4 +1,9 @@
 import os
+from dotenv import load_dotenv
 
-class Config:
-    SECRET_KEY = os.getenv("SECRET_KEY", "default_secret_key")
+load_dotenv()
+
+PORT = int(os.getenv("PORT", 4000))
+RAZORPAY_KEY_ID = os.getenv("RAZORPAY_KEY_ID")
+RAZORPAY_KEY_SECRET = os.getenv("RAZORPAY_KEY_SECRET")
+RAZORPAY_WEBHOOK_SECRET = os.getenv("RAZORPAY_WEBHOOK_SECRET")
